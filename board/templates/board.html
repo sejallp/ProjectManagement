@@ -1,0 +1,229 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+         <!-- Custom fonts for this template-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link href="{% static 'dashboard.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'bootstrap-5.0.1-dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'board_styles.css' %}">
+
+        <title>My Board</title>
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownclick">
+                <li class="topnav-brand">
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'accounts:home' %}">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
+                    </a>
+                </li>
+                <li><a href="{% url 'board:dashboard' %}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="#boards">Boards</a></li>
+                <li class="topnav-right"><a href="{% url 'accounts:logout' %}">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                </a></li>
+                <li class="topnav-right"><a href="#profile">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+            </ul>
+        </nav>
+        <div class="projecttitle">
+            <h3>{{pr.Title}}</h3>
+        </div>
+        <div>
+            <div class="boards-container">
+                <div class="row card-row">
+                    <div class="card board-card border-bottom-dark py-2" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="ToDo">
+                            <h5 class="card-title">To Do</h5>
+                            {% for x in card %}
+    
+                                {% if x.title_id == 1 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %} 
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>    
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="card board-card border-bottom-dark py-2" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="InProgress">
+                            <h5 class="card-title">In Progress</h5>
+                            {% for x in card %}
+    
+                                {% if x.title_id == 2 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card board-card border-bottom-dark py-2" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="CodeReview">
+                            <h5 class="card-title">Code review</h5>
+                            {% for x in card %}
+    
+                                {% if x.title_id == 3 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card board-card border-bottom-dark py-2" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="Testing">
+                            <h5 class="card-title">Testing</h5>
+                            {% for x in card %}
+    
+                                {% if x.title_id == 4 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card board-card border-bottom-dark py-2" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="Done">
+                            <h5 class="card-title">Done</h5>
+                            {% for x in card %}
+    
+                                {% if x.title_id == 5 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
+                        </div>
+                    </div>
+                <div>
+            </div>
+        </div>
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        <script type="text/javascript" src="{% static 'static_jquery/js/jquery.min.js' %}"></script>
+        <script src="{% static 'bootstrap-5.0.1-dist/js/bootstrap.min.jsN' %}" ></script>
+        
+        <script>
+            $(document).ready(function() {
+                var max_cards = 20;
+                var card = $(".board-card-body");
+                var add_card_button = $(".addcard");
+
+
+                var x = 0;
+                $(add_card_button).click(function(e) {
+                    e.preventDefault();
+
+                    if(x <= max_cards) {
+                        $(this).parent().parent().append('<div class="box card-box"><form method="POST" action="/"><div class="pencil-icon">&#128393;</div><div class="form-group"><label for="cardbody"></label><textarea class="form-control" rows="3" placeholder="Enter card info" name="cardbody"></textarea></div><br><button type="submit" class="btn crd-btn">Add</button><a href="#" class="remove_field"> &#10761; </a></form></div>');
+                        x++;
+                    }
+
+                    var card_box = $(".card-box");
+
+                    var card_btn = $(".card-btn");
+
+                    $(card_btn).click(function(e) {
+                        e.preventDefault();
+
+                        
+                    });
+
+                    $(card_box).on("click", ".remove_field", function(e) {
+                        e.preventDefault();
+                        $(this).parent().parent().remove();
+                    });
+
+
+
+                });
+
+
+                
+
+               
+
+            });
+        </script>
+
+
+    </body>
+</html>
