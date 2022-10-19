@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #cdd9ef85 ;
+    margin: 0;
+}
+
+
+/* Nav bar */
+nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+}
+nav ul {
+    background-color: #4e73df;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+ul.topnav li.topnav-right {
+    list-style: none;
+    float: right;
+}
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+ul.topnav li a:hover {
+    background-color: #fff;
+    color: #5d6873;
+    border-bottom: solid #4e73df 1.2px;
+    border-radius: 20px;
+    padding-bottom: 8.8px;
+}
+ul.topnav li.topnav-brand a:hover {
+    background-color: #4e73df;
+    color: #fff;
+    border-radius: 10px;
+    padding-bottom: 8.8px;
+}
+
+/* Project Title */
+div.projecttitle {
+    margin-top: 85px;
+    text-align: center;
+}
+.projecttitle h3 {
+    color: #5d6873;
+    text-transform: uppercase; 
+}
+
+/* Boards Container */
+.boards-container {
+    margin-top: 15px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    text-overflow: hidden;
+    padding: 20px;
+    display: flex;
+}
+
+
+/* Card */
+.board-card {
+    margin: 7px;
+    margin-top: 7px;
+    background-color: #4e73df;
+    color: #fff;
+}
+.box {
+    padding: 7px;
+    border-radius: 5px;
+    width: 100%;
+}
+.box:hover{
+    background-color: #5d68734b;
+    padding: 6px;
+    border: solid #1c2128 1px;
+}
+.card-box {
+    padding: 7px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button.addcard{
+    background-color:transparent ;
+    border: #2d333b;
+    text-decoration: none;
+    color: #cdd9ef;
+    padding: 2px;
+}
+button.addcard:hover {
+    background-color:transparent;
+    color: #cdd9ef;
+}
+
+.pencil-icon {
+    float: right;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: solid #2d333b 1px;
+}
+.pencil-icon:hover {
+    background-color: #1c212888;
+    margin: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: solid #009688 1px;
+}
+
+.remove_field {
+    margin: 7px;
+    padding-right: 5px;
+    border-bottom: solid #2d333b 1px;
+    color: #cdd9ef;
+    text-decoration: none;
+}
+.remove_field:hover {
+    color: #cdd9ef;
+    background-color: #1c212888;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: solid #009688 1px;
+}
+
+button.crd-btn {
+    background-color:#1c2128;
+    color:#cdd9ef;
+    border-bottom: solid #009688 2px;
+    border-radius: 10px;
+}
+button.crd-btn:hover {
+    background-color:#1c2128bd;
+    color: #cdd9ef;
+}
+
+.card-content {
+    color: #1c2128;
+    background-color: #eee;
+    padding: 6px;
+    border: solid #1c2128 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Borders */
+.border {
+    border: 1px solid #e3e6f0 !important;
+  }
+  
+  .border-top {
+    border-top: 1px solid #e3e6f0 !important;
+  }
+  
+  .border-right {
+    border-right: 1px solid #e3e6f0 !important;
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #e3e6f0 !important;
+  }
+  
+  .border-left {
+    border-left: 1px solid #e3e6f0 !important;
+  }
+
+  .border-primary {
+    border-color: #4e73df !important;
+  }
+  
+  .border-secondary {
+    border-color: #858796 !important;
+  }
+  
+  .border-success {
+    border-color: #1cc88a !important;
+  }
+  
+  .border-info {
+    border-color: #36b9cc !important;
+  }
+  
+  .border-warning {
+    border-color: #f6c23e !important;
+  }
+  
+  .border-danger {
+    border-color: #e74a3b !important;
+  }
+  
+  .border-light {
+    border-color: #f8f9fc !important;
+  }
+  
+  .border-dark {
+    border-color: #5a5c69 !important;
+  }
+  
+  .border-white {
+    border-color: #fff !important;
+  }
